@@ -1,0 +1,20 @@
+<div class="container">
+  <div>
+    <label>User:</label>
+    <label>
+      <input  [(ngModel)]="model.email"/>
+    </label>
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <label>
+      <input  [(ngModel)]="model.password" type="password"/>
+    </label>
+  </div>
+
+  <div>
+    <button (click)="login()">Login</button>
+  </div>
+</div>
+
