@@ -1,20 +1,21 @@
-<div class="container">
-  <div>
-    <label>User:</label>
-    <label>
-      <input  [(ngModel)]="model.email"/>
-    </label>
-  </div>
 
-  <div>
-    <label>Password:</label>
-    <label>
-      <input  [(ngModel)]="model.password" type="password"/>
-    </label>
-  </div>
-
-  <div>
-    <button (click)="login()">Login</button>
+<div class="login-page">
+  <div class="form">
+   <!-- <form class="register-form">
+      <input [(ngModel)]="user.email" type="email" placeholder="E-mail"  [ngModelOptions]="{standalone: true}"/>
+      <input [(ngModel)]="user.password" type="password" placeholder="Senha"  [ngModelOptions]="{standalone: true}"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>-->
+    <form class="login-form">
+      <input [(ngModel)]="user.email" type="text" name="email" placeholder="E-mail"  [ngModelOptions]="{standalone: true}"/>
+      <input [(ngModel)]="user.password" type="password" name="password" placeholder="Senha"  [ngModelOptions]="{standalone: true}"/>
+      <button (click)="login()">login</button>
+    <!--  <p class="message">Not registered? <a href="#">Create an account</a></p>-->
+    </form>
   </div>
 </div>
+
+
 

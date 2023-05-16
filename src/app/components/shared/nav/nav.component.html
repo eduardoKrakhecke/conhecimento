@@ -1,0 +1,16 @@
+<div class="navbar">
+  <a routerLink="/home">Home</a>
+  <a routerLink="/articles">Artigos</a>
+  <a routerLink="/categories">Categorias</a>
+  <div class="dropdown">
+    <button class="dropbtn">{{this.firstName}}
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/profile">Perfil</a>
+      <a routerLink="/login" (click)="logout()">Sair</a>
+    </div>
+  </div>
+</div>
+
+

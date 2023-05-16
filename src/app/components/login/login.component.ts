@@ -10,7 +10,7 @@ import { User } from "@app/models/user";
 })
 export class LoginComponent {
 
-  model = {} as User;
+  user = {} as User;
 
   constructor(
     private loginService: LoginService,
@@ -20,7 +20,7 @@ export class LoginComponent {
   ngOnInit(): void {}
 
   public login(): void {
-    this.loginService.login(this.model).subscribe(
+    this.loginService.login(this.user).subscribe(
       () => {
         this.router.navigateByUrl('/home');
       },

@@ -11,6 +11,12 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { JwtInterceptor } from "./interceptor/jwt.interceptor";
 import { FormsModule } from "@angular/forms";
+import { NavComponent } from './components/shared/nav/nav.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ArticleComponent } from './components/article/article/article.component';
+import { CardComponent } from './components/shared/card/card.component';
+import { CategoryComponent } from './components/category/category.component';
+
 
 
 
@@ -18,7 +24,12 @@ import { FormsModule } from "@angular/forms";
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavComponent,
+    ProfileComponent,
+    ArticleComponent,
+    CardComponent,
+    CategoryComponent,
   ],
   imports: [
     FormsModule,
