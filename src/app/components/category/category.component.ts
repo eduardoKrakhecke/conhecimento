@@ -10,6 +10,7 @@ import { Category } from "@app/models/category";
 export class CategoryComponent implements OnInit{
 
   categories = [] as Category[]
+  category = {} as Category
 
   constructor(private categoryService: CategoryService) {
   }
@@ -19,5 +20,19 @@ export class CategoryComponent implements OnInit{
       this.categories = response
     })
   }
+
+  createCategory(): void {
+    this.categoryService.saveCategory(this.category).subscribe(
+      ()=> {
+        alert("Lote salvo com sucesso!")
+        //this.lotes.reset()
+      },
+      (error)=> {
+        console.log(error)
+      },
+      ()=> {}
+    )
+  }
+
 
 }
