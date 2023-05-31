@@ -1,14 +1,32 @@
 <app-nav></app-nav>
 
 <div class="content">
-
-<app-card
-  title="Estatísticas"
-  content="Usuários: {{stats.users}} Artigos: {{stats.articles}} Categorias: {{stats.categories}}"
-  >
-</app-card>
-<div>
-  <p>Teste de integração contínua</p>
+  <div class="content-card">
+    <app-card
+      title="Estatísticas de Usuários"
+      content="Estatísticas de usuários cadastrados">
+      <div class="card-content">
+        <p>Usuários: {{stats.users}}</p>
+      </div>
+    </app-card>
+    <app-card
+      title="Estatísticas de Categorias"
+      content="Estatísticas de categorias existentes">
+      <div class="card-content">
+        <p>Categorias: {{stats.categories}}</p>
+      </div>
+    </app-card>
+    <app-card
+      title="Estatísticas de Artigos"
+      content="Estatísticas de artigos existentes">
+      <div class="card-content">
+        <p>Artigos: {{stats.articles}}</p>
+      </div>
+    </app-card>
+  </div>
+  <div>
+    <p>Teste de integração contínua</p>
+  </div>
 </div>
 
-</div>
+

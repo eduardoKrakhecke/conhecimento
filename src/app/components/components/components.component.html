@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+<div class="container">
+  <p>Componente modal</p>
+  <button (click)="openConfirmationModal()">Excluir</button>
+
+  <app-modal
+    title="Deseja fazer isso ?"
+    message="Lembre-se que não poderá ser desfeito"
+    btnConfirmName="Confirmar ?"
+    btnCancelName="Cancelar"
+    (closeConfirmation)="deleteItem($event)">
+
+  </app-modal>
+
+</div>
+

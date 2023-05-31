@@ -16,6 +16,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ArticleComponent } from './components/article/article/article.component';
 import { CardComponent } from './components/shared/card/card.component';
 import { CategoryComponent } from './components/category/category.component';
+import { ToastComponent } from './components/shared/toast/toast.component';
+import { ModalComponent } from './components/shared/modal/modal.component';
+import { ComponentsComponent } from './components/components/components.component';
 
 
 
@@ -30,6 +33,9 @@ import { CategoryComponent } from './components/category/category.component';
     ArticleComponent,
     CardComponent,
     CategoryComponent,
+    ToastComponent,
+    ModalComponent,
+    ComponentsComponent,
   ],
   imports: [
     FormsModule,

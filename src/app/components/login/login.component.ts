@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoginService } from "@app/services/login/login.service";
 import { Router } from "@angular/router";
 import { User } from "@app/models/user";
+import {ToastService} from "@app/components/shared/toast/toast.service";
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,7 @@ export class LoginComponent {
   constructor(
     private loginService: LoginService,
     private router: Router,
+    public toastService: ToastService
   ) {}
 
   ngOnInit(): void {}
@@ -25,9 +27,11 @@ export class LoginComponent {
         this.router.navigateByUrl('/home');
       },
       (error: any) => {
-        if (error.status == 401)
-          alert('usuário ou senha inválido')
-        else console.error(error);
+        if (error.status == 400 || error.status == 401) {
+          this.toastService.showToast('usuário ou senha inválidos', 'error')
+        } else {
+          console.error(error);
+        }
       }
     );
   }

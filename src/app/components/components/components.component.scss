@@ -1,9 +1,6 @@
 @import '../../../styles/variables';
 
-.content {
+.container {
   font-family: $font-family;
-}
-.content-card {
-  display: flex;
-  flex-direction: row;
+  padding: 15px;
 }
