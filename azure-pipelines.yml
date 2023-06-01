@@ -26,4 +26,4 @@ steps:
     azureSubscription: 'Azure subscription 1(d0b34360-0716-41bc-8eec-e1801b9a7127)'
     appType: 'webApp'
     WebAppName: 'conhecimento-service'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+ 
