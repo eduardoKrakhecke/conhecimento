@@ -20,14 +20,16 @@ steps:
     npm install
     ng build --configuration production
   displayName: 'npm install and build'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: '_eduardoKrakhecke.conhecimento'
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure subscription 1(d0b34360-0716-41bc-8eec-e1801b9a7127)'
     appType: 'webApp'
     WebAppName: 'conhecimento-service'
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: '_eduardoKrakhecke.conhecimento' 
+ 
  
