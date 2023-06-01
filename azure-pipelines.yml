@@ -28,5 +28,6 @@ steps:
     WebAppName: 'conhecimento-service'
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: '_eduardoKrakhecke.conhecimento' 
  
