@@ -25,6 +25,7 @@ steps:
     contents: '_buildOutput/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: '_eduardoKrakhecke.conhecimento'
